@@ -77,12 +77,11 @@
               "listen": "test",
               "script": {
                 "exec": [
-                  "javascript",
-                  "   if (pm.response.code === 200) {",
-                  "       var jsonData = pm.response.json();",
-                  "       pm.collectionVariables.set(\"token\", jsonData.token);",
-                  "       console.log(\"Token saved:\", jsonData.token);",
-                  "   }"
+                  "if (pm.response.code === 200) {",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.collectionVariables.set(\"token\", jsonData.token);",
+                  "    console.log(\"✅ Token saved:\", jsonData.token);",
+                  "}"
                 ],
                 "type": "text/javascript",
                 "packages": {},
@@ -166,7 +165,7 @@
         {
           "name": "Delete Wallet",
           "request": {
-            "method": "GET",
+            "method": "DELETE",
             "header": [],
             "url": {
               "raw": "{{base_url}}/wallets/1",
