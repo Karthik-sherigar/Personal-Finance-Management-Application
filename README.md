@@ -106,3 +106,17 @@ Server will run on: `http://localhost:3000`
 ## Author
 
 Karthik Sherigar
+
+## Postman Collection Setup
+
+After importing the Postman collection:
+
+1. Click on the **"Personal Finance API"** collection
+2. Go to **"Variables"** tab
+3. Add this variable:
+   - Variable: `base_url`
+   - Initial Value: `http://localhost:3000/api`
+   - Current Value: `http://localhost:3000/api`
+4. Click **"Save"**
+
+Now all requests will work!
